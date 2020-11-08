@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#demo {
+  word-break: break-word;
+}
+#div1 {
+  position: fixed;
+  right: 50%;
+  top: 20px;
+  transform: translateX(50%);
+}
+#div1::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+#div1::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  #demo {
+    height: 50vh;
+    overflow: scroll;
+  }
+  #divWrapper {
+    height: 50vh;
+  }
+  #div1 {
+    height: 50vp;
+    position: relative;
+    top: 50%;
+
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
